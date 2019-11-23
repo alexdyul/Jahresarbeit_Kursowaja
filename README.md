@@ -37,3 +37,5 @@ Prosopographic analysis of the protocols of the meetings of the conference of th
 - Korrelation den prosopographische Daten von andere Datenbanken und Bücher (bis 1. Apr. 2020)
 
 - Datenanalyse und Zusammenfassung der Jahresarbeit (bis 1. May 2020)
+
+## Jede Woche ist kurzer Bericht nötig
