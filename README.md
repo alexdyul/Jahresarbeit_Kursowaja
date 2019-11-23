@@ -26,3 +26,14 @@ Prosopographic analysis of the protocols of the meetings of the conference of th
 
 - Erik-Amburger-Datenbank ["Ausländer im vorrevolutionären Russland"](https://www.amburger.ios-regensburg.de/)
 
+### Generalplan
+
+- Parsing von den Protokollen (bis 1. Dez. 2019)
+
+- Verarbeitung den Skans in OCR4all (bis 1. Feb. 2020)
+
+- Identifizierung von Personen im Namensregister (bis 1. März 2020)
+
+- Korrelation den prosopographische Daten von andere Datenbanken und Bücher (bis 1. Apr. 2020)
+
+- Datenanalyse und Zusammenfassung der Jahresarbeit (bis 1. May 2020)
