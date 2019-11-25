@@ -39,3 +39,12 @@ Prosopographic analysis of the protocols of the meetings of the conference of th
 - Datenanalyse und Zusammenfassung der Jahresarbeit (bis 1. May 2020)
 
 ## Jede Woche ist kurzer Bericht nötig
+
+Kommentar S. H.:
+
+1. Es reicht, wenn wir uns beim Erreichen von Teilzielen koordinieren. Nächstes Teilziel: wenn Sie alle Protokolle haben und OCR4all installiert haben und eine leise Ahnung haben, wie es funktioniert, können wir uns im neuen Raum des CDH treffen und uns das gemeinsam anschauen.
+
+1. Vorher brauchen Sie sich nur zu melden, wenn es Probleme gibt.
+
+1. Wenn Sie den Download der Bilder unter Windows planen, müssen Sie kein vollständiges Python-Skript programmieren. Siehe erste Antwort in diesem Thread: https://superuser.com/questions/362152/native-alternative-to-wget-in-windows-powershell
+
