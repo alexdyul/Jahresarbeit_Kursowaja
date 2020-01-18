@@ -39,3 +39,6 @@ Prosopographic analysis of the protocols of the meetings of the conference of th
 - Datenanalyse und Zusammenfassung der Jahresarbeit (bis 1. May 2020)
 
 ## Jede Woche ist kurzer Bericht nötig
+
+## Hauptfrage
+Wer waren inoffizielle (latente) Mitglieder von Russische Akademie der Wissenschaften in 20 - 40 Jahren XVIII (1725 - 1743) und welche Charakteristik hatten sie?
