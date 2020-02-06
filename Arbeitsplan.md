@@ -28,9 +28,9 @@ Prosopographic analysis of the protocols of the meetings of the conference of th
 
 ### Generalplan
 
-- Parsing von den Protokollen (bis 1. Dez. 2019) # gemacht mit Rython-parser am 05. Feb. 2020. Es war sehr kompliziert. 
+- Parsing von den Protokollen (bis 1. Dez. 2019) **gemacht mit Rython-parser am 05. Feb. 2020. Es war sehr kompliziert** 
 
-- Verarbeitung den Skans in OCR4all (bis 1. Feb. 2020) # gemacht mit Abby_FinerReader_15 am 06. Feb. 2020. Es war sehr leicht. 
+- Verarbeitung den Skans in ~~OCR4all~~ (bis 1. Feb. 2020) **gemacht mit Abby_FinerReader_15 am 06. Feb. 2020. Es war sehr leicht**
 
 - Identifizierung von Personen im Namensregister (bis 1. März 2020)
 
