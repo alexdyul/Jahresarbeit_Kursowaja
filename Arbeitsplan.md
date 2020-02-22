@@ -58,8 +58,8 @@ def get_file(url):
     return response
 
 def save_data(name, file_data):
-    file = open(name, 'bw') #Бинарный режим, изображение передається байтами
-    for chunk in file_data.iter_content(4096): # Записываем в файл по блочно данные
+    file = open(name, 'bw')
+    for chunk in file_data.iter_content(4096):
         file.write(chunk)
 
 def get_name(url):
