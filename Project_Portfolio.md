@@ -1,8 +1,12 @@
-""Alexander Dyuldenko""
-Prosopographic analysis of the protocols of the meetings of the conference of the Imperial Academy of Sciences (1725 - 1743)
-Project Portfolio 
+# Project Portfolio 
+
+**Alexander Dyuldenko**
+
+**Prosopographic analysis of the protocols of the meetings of the conference of the Imperial Academy of Sciences (1725 - 1743)**
+
 
 Biographies describe life stories of particular people of significance, with the aim of getting a better understanding of their personality and actions, e.g., to understand their motives [Roberts, 2002]. In contrast, the focus of prosopography is to study life histories of groups of people in order to find out some kind of commonness or average in them [Verbovenet al., 2007].
+
 A major problem faced by historians is the relative paucity of source material and the consequent danger of over-interpretation that arises from generalization and the 'case-study' approach.
 Prosopography can help to overcome this problem: "By subjecting a … large number of members from a predefined population to the same questionnaire, the particular characteristics of that population as a whole become visible".
 [Verbovenet al., 2007, p.36].
