@@ -92,8 +92,9 @@ The accumulated data form the basis for a third stage, i.e. specific analyses of
 4.	Eric Amburger [database](https://www.amburger.ios-regensburg.de/) "Foreigners in pre-revolutionary Russia." Website of the Institute for Eastern and Southeast European Studies named after Leibniz.
 
 
-Description of technical requirements 
-1.	 Creation of code executable by a computer for parsing images of protocols and books.
+### Description of technical requirements 
+
+1.	Creation of code executable by a computer for parsing images of protocols and books.
 
 2.	OCR Data Recognition in Abbyy FinerReader 15 images of all pages of protocols and books. 
 
@@ -119,15 +120,25 @@ Description of technical requirements
 
 13.	Visualization of the frequency of appearance in the protocols of actors, the length of the text corresponding to it in the protocol, the subject of the text. Relevant techniques include plotting. 
 
-Conclusion. 
-Applying Linked Data principles to cultural heritage data and historical research is a promising approach to solve the problems of isolated and semantically heterogeneous data sources [Leskinen al., 2018]. We assume that the quantitative data obtained will help identify freelance academics for the period 1725-1743. On this basis, interpretation of the results of aggregation detected objects of research will be carried out. 
+### Conclusion
+
+Applying Linked Data principles to cultural heritage data and historical research is a promising approach to solve the problems of isolated and semantically heterogeneous data sources [Leskinen al., 2018]. 
+
+We assume that the quantitative data obtained will help identify freelance academics for the period 1725-1743. On this basis, interpretation of the results of aggregation detected objects of research will be carried out. 
+
 Interpretation of the results includes:
 1.	Modeling the phenomenon of 'freelance' academician. Modeling produces a schema that describes the elements and structure of an object of inquiry in an explicit way.
+
 2.	Theorizing the model of the phenomenon of 'freelance' academician, identifying general principles to explain the corresponding phenomenon. Theorizing is a method which aims to relate a number of elements or ideas into a coherent system based on some general principles and capable of explaining relevant phenomena or observations. Theorizing relies on techniques such as reasoning, abstract thinking, conceptualizing and defining. A theory may be implemented in the form of a model, or a model may give rise to formulating a theory.
+
 3.	For data storage, archiving is provided for archiving in open github repository.
 
-References
+### References
+
 Alexander Dyuldenko. 2017. Johannes Jährig: historical portrait of a representative of Russian academic science in the second half of the 18th century. Stavropol State Pedagogical Institute. 
+
 Koenraad Verboven, Myriam Carlier, and Jan Dumolyn. 2007. A short manual to the art of prosopography. In Prosopography Approaches and Applications. A Handbook, pages 35–70. University of Ghent.
+
 Petri Leskinen, Eero Hyvonen and Jouni Tuominen. 2018. Analyzing and Visualizing Prosopographical Linked Data Based on Biographies. University of Helsinki. 
+
 Robert A. Hanneman and Mark Riddle. 2005. Introduction to social network methods. University of California, Riverside, CA. http://faculty.ucr.edu/_hanneman/.
