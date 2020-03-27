@@ -81,8 +81,11 @@ The accumulated data form the basis for a third stage, i.e. specific analyses of
 ### Characterization of the initial digital objects 
 
 1.	[Scans](http://ranar.spb.ru/rus/protokol1/id/233/) of the protocols of the Academy of Sciences for 1725-1743 are available to us. Site of the Russian Academy of Sciences. Publication of 1897 of average quality. Protocol languages:
+
 • Latin from November 13, 1725 to November 08, 1733;
+
 • German from November 11, 1734 to December 31, 1741;
+
 • Latin from January 9, 1742 to December 23, 1743.
 
 2.	[Scan](https://www.prlib.ru/item/451270) of the book “List of members of the Imperial Academy of Sciences, 1725 - 1907”, edited by Boris Lvovich Modzalevsky. Publication of 1908 of average quality. Website of the Russian Presidential Library.
