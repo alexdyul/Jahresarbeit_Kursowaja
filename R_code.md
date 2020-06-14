@@ -1,4 +1,4 @@
-№ R code for data analysis and visualization
+# R code for data analysis and visualization
 
 ```R
 library("tidyverse")
