@@ -122,9 +122,9 @@ if __name__=="__main__":
 
 ### Problem 
 
-[The original protocols](https://github.com/alexdyul/Jahresarbeit_Kursowaja/blob/master/preza/Kohl.png)
+![The original protocols](https://github.com/alexdyul/Jahresarbeit_Kursowaja/blob/master/preza/Kohl.png)
 
-[Text corpora of the protocols](https://github.com/alexdyul/Jahresarbeit_Kursowaja/blob/master/preza/kohl1.png)
+![Text corpora of the protocols](https://github.com/alexdyul/Jahresarbeit_Kursowaja/blob/master/preza/kohl1.png)
 
 
 ## Collection. Aggregation of discovered resources in a structured way. [table XLSX](https://github.com/alexdyul/Jahresarbeit_Kursowaja/blob/master/list_person.xlsx).
