@@ -293,7 +293,24 @@ df %>%
 ![](https://github.com/alexdyul/Jahresarbeit_Kursowaja/blob/master/preza/geom_smooth.png)
 
 
+## Conclusion
 
+### In 60.42% of cases, academics came from German lands. This percentage can be adjusted upwards by introducing the category “nationality”. Many academics born in Russia come from German families.
+
+### The average age for admission to the academy was 30.66 years. This, of course, reflects the reality of the first half of the 18th century, when the average life expectancy of academics was 56.94 years.
+
+### Equal distribution of the number of academicians by scientific classes. 16 people, or 33% of the total for mathematical, physical and human sciences.
+
+### The most popular specialties of academicians are mathematics and history, 18.75% of the total number of specialties.
+
+### There is a slight trend: the more adult person becomes an academician, the higher his performance in the activities of the academy.
+
+### The average “mid_year_frequency” was 24.28 references per year. Of the 16 humanities, only 3 academicians were able to overcome this bar. Among mathematicians and physicists, 7 academicians exceeded the average value. However, this circumstance did not affect the distribution of the number of academicians by class of science.
+
+# Thus, the "average portrait" of a full member of the Russian Academy of Sciences in the period from 1725 to 1743 looks like this: a native of Germanic lands, he was accepted to the academy at the age of 30 with a degree in mathematics or history.
+
+![](http://isaran.ru/isaran/image2.php?guid=8ED13652-56FA-AF50-298D-D2167A795E85)
+[Bayer Gottlieb Siegfried](http://isaran.ru/?q=ru/person&guid=2227570B-250E-6A77-25BA-CC4FA8AEE383&str=%D0%91%D0%B0%D0%B9%D0%B5%D1%80)
 
 
 
