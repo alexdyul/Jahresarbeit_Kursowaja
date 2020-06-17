@@ -16,6 +16,7 @@
 
 
 ### [Regulations on the establishment of the Academy of Sciences and Arts. 1724](http://arran.ru/data/pdf/projpol.pdf):
+
 #### Class 1 - Mathematical Sciences. It was divided into 3 categories:
 • Arithmetic, algebra and geometry
 • Astronomy, geography, navigation
@@ -31,10 +32,16 @@
 • Private and public law, politics and ethics
 
 
+
+
+
 ## Problem 1
 On the Academy’s official page it is indicated that in 1746 the first Russian president of the Academy was appointed and after that the Russian members of the Academy began to be elected. The first of them were S.P. Krasheninnikov and M.V. Lomonosov. The years of election were 1745 and 1742.
 
 ![](https://github.com/alexdyul/Jahresarbeit_Kursowaja/blob/master/preza/acad_hist.png)
+
+
+
 
 ### Really?
 
@@ -42,8 +49,14 @@ On the Academy’s official page it is indicated that in 1746 the first Russian 
 Screenshot. [Modzalevsky, 1908]
 
 
+
+
+
 ## Problem 2
 In addition, the academy’s page does not indicate the country where the academy members came from, but says that they were “foreigners”. At the same time, for many historians, the predominance of scientists from German lands in the Russian Academy of Sciences is obvious, and there is nothing “anti-Russian” in this fact.
+
+
+
 
 
 ### Our target group.
@@ -51,7 +64,13 @@ In this work, we decided to take for the target group a clearly limited category
 This category is limited to 48 persons in the period from 1725 to 1743. We can say this with confidence by referring to the book “List of members of the Imperial Academy of Sciences, 1725 - 1907” (edited by Boris Lvovich Modzalevsky, 1908).
 
 
+
+
+
 ## Main question. Who were the full members of the Russian Academy of Sciences in the 20s and 40s of the 18th century and what collective characteristics did they have?
+
+
+
 
 
 ## Characterization of the initial digital objects
@@ -70,6 +89,9 @@ This category is limited to 48 persons in the period from 1725 to 1743. We can s
 3.	[The database](http://isaran.ru/?q=ru/persostav) of the personal composition of the Russian Academy of Sciences. The site of the "Information System Archives of the Russian Academy of Sciences".
 
 4.	[Eric Amburger database](https://www.amburger.ios-regensburg.de/) "Foreigners in pre-revolutionary Russia." Website of the Institute for Eastern and Southeast European Studies named after Leibniz.
+
+
+
 
 
 
@@ -121,9 +143,13 @@ if __name__=="__main__":
 
 ## OCR data recognition in Abbyy FinerReader of 15 images of all protocol pages
 
+
 ## Convert the image recognized in OCR to [text format](https://github.com/alexdyul/Jahresarbeit_Kursowaja/blob/master/protocols.txt)
 
+
 ## Detection of objects such as human. At this stage, it was difficult to identify some people, as we talked about earlier. 
+
+
 
 ### Problem 
 
@@ -133,11 +159,14 @@ The original protocols
 Text corpora of the protocols
 ![](https://github.com/alexdyul/Jahresarbeit_Kursowaja/blob/master/preza/kohl1.png)
 
+
 #### Prof. De l’lsle
 
 A search using a regular expression language such as “Nicol. * Lsle”, “Nicol. {6} lsle” and others, allowed to identify 130 and 122 cases for each person. At the same time, a search by the name “lsle” reveals 425 matches. 
 
 Thus, more than a third of cases could not be identified due to the fact that often in the protocols “Prof. De l’lsle. " Since both brothers were professors, this makes final identification impossible without a detailed reading of the protocol context.
+
+
 
 #### OCR errors is from 2 to 4 %
 
@@ -146,6 +175,9 @@ In the case of Du Vernoi, the use of regular expressions revealed 3.15% of recog
 In the case of Bayer, regular expressions revealed 2.17% more matches (from 812 to 830).
 
 This and other examples allow us to make the assumption that the percentage of errors in the case of other surnames is from 2 to 4 %.
+
+
+
 
 
 ## Collection. Aggregation of discovered resources in a structured way. [table XLSX](https://github.com/alexdyul/Jahresarbeit_Kursowaja/blob/master/list_person.xlsx).
@@ -179,7 +211,11 @@ This and other examples allow us to make the assumption that the percentage of e
 • link. Link to the individual page in The database of the personal composition of the Russian Academy of Sciences.
 
 
+
 ## Visualization. All the analytical work and visualization we carried out in the programming language R in the program Rstudio.
+
+
+
 
 ### The simplest and most obvious thing that we could analyze is the origin by country as a percentage.
 
@@ -205,6 +241,9 @@ list_person %>%
 ![](https://github.com/alexdyul/Jahresarbeit_Kursowaja/blob/master/preza/country.png)
 
 
+
+
+
 ### The average age at which persons were admitted to the academy was 30.66 years.  
 
 ```R
@@ -220,6 +259,9 @@ list_person %>%
 ![](https://github.com/alexdyul/Jahresarbeit_Kursowaja/blob/master/preza/average%20age.png)
 
 
+
+
+
 ### Visualization of the average annual frequency in the text corpora of the protocols shows us several "outliers". 
 
 ```R
@@ -233,6 +275,9 @@ list_person %>%
 ```
 
 ![](https://github.com/alexdyul/Jahresarbeit_Kursowaja/blob/master/preza/average%20annual%20frequency.png)
+
+
+
 
 
 
@@ -254,6 +299,9 @@ list_person %>%
 
 ![](https://github.com/alexdyul/Jahresarbeit_Kursowaja/blob/master/preza/field%20of%20knowledge.png)
 
+
+
+
 ```R
 list_person %>% 
   group_by(specialty) %>%
@@ -271,6 +319,9 @@ list_person %>%
 ![](https://github.com/alexdyul/Jahresarbeit_Kursowaja/blob/master/preza/specialties.png)
 
  
+
+
+
 
 ### We decided to create a general picture in the interconnection of the categories “mid_year_frequency” and “age_receipt”. 
 We painted the names in the category “study”
@@ -293,19 +344,31 @@ df %>%
 ![](https://github.com/alexdyul/Jahresarbeit_Kursowaja/blob/master/preza/geom_smooth.png)
 
 
+
+
+
 ## Conclusion
+
 
 ### In 60.42% of cases, academics came from German lands. This percentage can be adjusted upwards by introducing the category “nationality”. Many academics born in Russia come from German families.
 
+
 ### The average age for admission to the academy was 30.66 years. This, of course, reflects the reality of the first half of the 18th century, when the average life expectancy of academics was 56.94 years.
+
 
 ### Equal distribution of the number of academicians by scientific classes. 16 people, or 33% of the total for mathematical, physical and human sciences.
 
+
 ### The most popular specialties of academicians are mathematics and history, 18.75% of the total number of specialties.
+
 
 ### There is a slight trend: the more adult person becomes an academician, the higher his performance in the activities of the academy.
 
+
 ### The average “mid_year_frequency” was 24.28 references per year. Of the 16 humanities, only 3 academicians were able to overcome this bar. Among mathematicians and physicists, 7 academicians exceeded the average value. However, this circumstance did not affect the distribution of the number of academicians by class of science.
+
+
+
 
 # Thus, the "average portrait" of a full member of the Russian Academy of Sciences in the period from 1725 to 1743 looks like this: a native of Germanic lands, he was accepted to the academy at the age of 30 with a degree in mathematics or history.
 
