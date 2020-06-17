@@ -122,14 +122,56 @@ if __name__=="__main__":
 
 ### Problem 
 
-![The original protocols](https://github.com/alexdyul/Jahresarbeit_Kursowaja/blob/master/preza/Kohl.png)
+The original protocols
+![](https://github.com/alexdyul/Jahresarbeit_Kursowaja/blob/master/preza/Kohl.png)
 
-![Text corpora of the protocols](https://github.com/alexdyul/Jahresarbeit_Kursowaja/blob/master/preza/kohl1.png)
+Text corpora of the protocols
+![](https://github.com/alexdyul/Jahresarbeit_Kursowaja/blob/master/preza/kohl1.png)
+
+#### Prof. De l’lsle
+
+A search using a regular expression language such as “Nicol. * Lsle”, “Nicol. {6} lsle” and others, allowed to identify 130 and 122 cases for each person. At the same time, a search by the name “lsle” reveals 425 matches. 
+
+Thus, more than a third of cases could not be identified due to the fact that often in the protocols “Prof. De l’lsle. " Since both brothers were professors, this makes final identification impossible without a detailed reading of the protocol context.
+
+#### OCR errors is from 2 to 4 %
+
+In the case of Du Vernoi, the use of regular expressions revealed 3.15% of recognition errors and increased the number of matches from 369 to 381.
+
+In the case of Bayer, regular expressions revealed 2.17% more matches (from 812 to 830).
+
+This and other examples allow us to make the assumption that the percentage of errors in the case of other surnames is from 2 to 4 %.
 
 
 ## Collection. Aggregation of discovered resources in a structured way. [table XLSX](https://github.com/alexdyul/Jahresarbeit_Kursowaja/blob/master/list_person.xlsx).
 
 ![](https://github.com/alexdyul/Jahresarbeit_Kursowaja/blob/master/preza/tibble.png)
+
+• year_of_birth
+
+• year_of_death
+
+• lifetime
+
+• year_receipt. Year of admission to the academy.
+
+• age_receipt. The age at which the person was admitted to the academy.
+
+• frequency. Frequency of references to the person in the text corpora of the protocols.
+
+• activ_time. The number of years of stay as a member of the academy in the period from 1725 - 1743.
+
+• mid_year_frequency. The average frequency of mentions of a person per year. It is considered as frequency/activ_time. This is the only metric that allows you to indirectly talk about the activity of participation in the activities of the Academy.
+
+• country_of_birth. In the case of German lands, the conditional generalization “Germany” was used.
+
+• country_of_death. In the case of German lands, the conditional generalization “Germany” was used.
+
+• specialty. The branch of knowledge with which the person entered the academy and was most closely associated.
+
+• study. One of the three classes of sciences in accordance with the rules of the Academy of 1724. Mathematical, physical, humanitarian.
+
+• link. Link to the individual page in The database of the personal composition of the Russian Academy of Sciences.
 
 
 
