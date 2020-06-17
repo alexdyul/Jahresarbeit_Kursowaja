@@ -46,6 +46,11 @@ Screenshot. [Modzalevsky, 1908]
 In addition, the academy’s page does not indicate the country where the academy members came from, but says that they were “foreigners”. At the same time, for many historians, the predominance of scientists from German lands in the Russian Academy of Sciences is obvious, and there is nothing “anti-Russian” in this fact.
 
 
+### Our target group.
+In this work, we decided to take for the target group a clearly limited category of “full members of the Academy of Sciences”.
+This category is limited to 48 persons in the period from 1725 to 1743. We can say this with confidence by referring to the book “List of members of the Imperial Academy of Sciences, 1725 - 1907” (edited by Boris Lvovich Modzalevsky, 1908).
+
+
 ## Main question. Who were the full members of the Russian Academy of Sciences in the 20s and 40s of the 18th century and what collective characteristics did they have?
 
 
@@ -155,89 +160,142 @@ This and other examples allow us to make the assumption that the percentage of e
 
 • year_receipt. Year of admission to the academy.
 
-• age_receipt. The age at which the person was admitted to the academy.
+#### • age_receipt. The age at which the person was admitted to the academy.
 
 • frequency. Frequency of references to the person in the text corpora of the protocols.
 
 • activ_time. The number of years of stay as a member of the academy in the period from 1725 - 1743.
 
-• mid_year_frequency. The average frequency of mentions of a person per year. It is considered as frequency/activ_time. This is the only metric that allows you to indirectly talk about the activity of participation in the activities of the Academy.
+#### • mid_year_frequency. The average frequency of mentions of a person per year. It is considered as frequency/activ_time. This is the only metric that allows you to indirectly talk about the activity of participation in the activities of the Academy.
 
-• country_of_birth. In the case of German lands, the conditional generalization “Germany” was used.
+#### • country_of_birth. In the case of German lands, the conditional generalization “Germany” was used.
 
 • country_of_death. In the case of German lands, the conditional generalization “Germany” was used.
 
-• specialty. The branch of knowledge with which the person entered the academy and was most closely associated.
+#### • specialty. The branch of knowledge with which the person entered the academy and was most closely associated.
 
-• study. One of the three classes of sciences in accordance with the rules of the Academy of 1724. Mathematical, physical, humanitarian.
+#### • study. One of the three classes of sciences in accordance with the rules of the Academy of 1724. Mathematical, physical, humanitarian.
 
 • link. Link to the individual page in The database of the personal composition of the Russian Academy of Sciences.
 
 
+## Visualization. All the analytical work and visualization we carried out in the programming language R in the program Rstudio.
 
+### The simplest and most obvious thing that we could analyze is the origin by country as a percentage.
 
+```R
+library("tidyverse")
+library("readxl")
 
+list_person <- read_xlsx("C:/R/Kurs/list_person.xlsx")
 
-
-
-### Generalplan
-
-- Parsing von den Protokollen (bis 1. Dez. 2019)  **Gemacht mit Rython-parser am 05. Feb. 2020. Es war sehr kompliziert** 
-
-```python
-import requests
-from bs4 import BeautifulSoup as bs
-
-headers = {"Accept": "*/*",
-           "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 Edge/18.18362"}
-
-b_url = "http://ranar.spb.ru/rus/protokol1/id/233"
-
-def protokol ():
-    url = []
-    sesson = requests.Session()
-    request = sesson.get(b_url, headers = headers)
-    if request.status_code == 200:
-        soup = bs(request.content, "lxml")
-        table = soup.find_all("a", attrs={"class": "zoom"})
-        for foto in table:
-            url.append ("http://ranar.spb.ru" + foto["href"])
-    else:
-        print ("error")
-    return (url)
-    
-def get_file(url):
-    # print(url)
-    response = requests.get(url, stream=True)
-    return response
-
-def save_data(name, file_data):
-    file = open(name, 'bw')
-    for chunk in file_data.iter_content(4096):
-        file.write(chunk)
-
-def get_name(url):
-    name = url.split('/')[-1]
-    return name
-    
-def main ():
-    for name in protokol():
-        save_data(get_name(name),get_file(name))
-
-if __name__=="__main__":
-    main()
+list_person %>% 
+  group_by(country_of_birth) %>%
+  count(country_of_birth, sort = TRUE) %>%
+  mutate(proz = n/48*100) %>%
+  ggplot(aes(fct_reorder(country_of_birth, proz), proz, label = proz)) +
+  labs(x = "",
+       y = "",
+       title = "Сountry of birth (%)")+
+  geom_col() +
+  geom_text(nudge_y = 10)+
+  coord_flip()
 ```
 
-- Verarbeitung den Skans in ~~OCR4all~~ (bis 1. Feb. 2020)  **Gemacht mit Abbyy_FinerReader_15 am 06. Feb. 2020. Mindestens 3 % Fehler. Es war sehr leicht**
+![](https://github.com/alexdyul/Jahresarbeit_Kursowaja/blob/master/preza/country.png)
 
-- Identifizierung von Personen im Namensregister (bis 1. März 2020)
 
-- Korrelation den prosopographische Daten von andere Datenbanken und Bücher (bis 1. Apr. 2020)
+### The average age at which persons were admitted to the academy was 30.66 years.  
 
-- Datenanalyse und Zusammenfassung der Jahresarbeit (bis 1. May 2020)
+```R
+list_person %>% 
+  ggplot(aes(fct_reorder(name, age_receipt), age_receipt)) +
+  labs(x = "",
+       y = "",
+       title = "Age receipt")+
+  geom_col() +
+  coord_flip()
+```
 
-## Jede Woche ist kurzer Bericht nötig
+![](https://github.com/alexdyul/Jahresarbeit_Kursowaja/blob/master/preza/average%20age.png)
 
-## Hauptfrage
-Wer waren inoffizielle (latente) Mitglieder von Russische Akademie der Wissenschaften in 20 - 40 Jahren XVIII (1725 - 1743) und welche Charakteristik hatten sie?
+
+### Visualization of the average annual frequency in the text corpora of the protocols shows us several "outliers". 
+
+```R
+list_person %>% 
+  ggplot(aes(fct_reorder(name, mid_year_frequency), mid_year_frequency)) +
+    labs(x = "",
+       y = "",
+       title = "Mid year frequency")+
+  geom_col() +
+  coord_flip()
+```
+
+![](https://github.com/alexdyul/Jahresarbeit_Kursowaja/blob/master/preza/average%20annual%20frequency.png)
+
+
+
+### If we calculate the distribution of academy members by field of knowledge, then in the classification of 1724 we get absolute equality.
+
+```R
+list_person %>% 
+  group_by(study) %>%
+  count(study, sort = TRUE) %>%
+  mutate(proz = n/48*100) %>%
+  ggplot(aes(fct_reorder(study, proz), proz, label = proz)) +
+  labs(x = "",
+       y = "",
+       title = "Study (%)")+
+  geom_col() +
+  geom_text(nudge_y = 10)+
+  #coord_flip()
+```
+
+![](https://github.com/alexdyul/Jahresarbeit_Kursowaja/blob/master/preza/field%20of%20knowledge.png)
+
+```R
+list_person %>% 
+  group_by(specialty) %>%
+  count(specialty, sort = TRUE) %>%
+  mutate(proz = n/48*100) %>%
+  ggplot(aes(fct_reorder(specialty, proz), proz, label = proz)) +
+  labs(x = "",
+       y = "",
+       title = "Specialties (%)")+
+  geom_col() +
+  geom_text(nudge_y = 5)+
+  coord_flip()
+```
+
+![](https://github.com/alexdyul/Jahresarbeit_Kursowaja/blob/master/preza/specialties.png)
+
+ 
+
+### We decided to create a general picture in the interconnection of the categories “mid_year_frequency” and “age_receipt”. 
+We painted the names in the category “study”
+We used the geom_smooth method to Add a smoothed conditional mean.
+
+```R
+library("ggrepel")
+
+list_person %>%
+mutate(age_receipt = as.integer(age_receipt)) ->
+  df
+
+df %>% 
+  ggplot(aes(age_receipt, mid_year_frequency, label = name))+
+  geom_smooth(method = "lm", se = FALSE)+
+  geom_point(aes(color = study))+
+  ggrepel::geom_text_repel(aes(color = study))
+```
+
+![](https://github.com/alexdyul/Jahresarbeit_Kursowaja/blob/master/preza/geom_smooth.png)
+
+
+
+
+
+
+
 
